@@ -1,19 +1,21 @@
 import {
   takeScreenshot,
-  // press,
-  // toExist,
+  press,
+  toExist,
   // changeText,
   // scrollTo,
   // scrollToEnd,
   // longPress,
   // reload,
 } from "react-native-owl"
+import { delay } from "../../app/utils/delay"
 
 jest.setTimeout(30000)
 
 describe("App.tsx", () => {
   describe("Basic navigation", () => {
     it("takes a screenshot of the initial screen", async () => {
+      await delay(2000)
       const screen = await takeScreenshot("initial")
 
       expect(screen).toMatchBaseline()
@@ -27,15 +29,15 @@ describe("App.tsx", () => {
     //     expect(screen).toMatchBaseline()
     //   })
 
-    //   it("press a Pressable, waits for an element then takes a screenshot", async () => {
-    //     await press("Pressable")
+    // it("press Tap to sign in, then takes a screenshot", async () => {
+    //   await press("login-button")
 
-    //     await toExist("TextInput")
+    //   await toExist("welcome-heading")
 
-    //     const screen = await takeScreenshot("test-input")
+    //   const screen = await takeScreenshot("welcome-screen")
 
-    //     expect(screen).toMatchBaseline()
-    //   })
+    //   expect(screen).toMatchBaseline()
+    // })
 
     //   it("enters some text and takes a screenshot", async () => {
     //     await changeText("TextInput", "Entered text")

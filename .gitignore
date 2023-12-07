@@ -76,6 +76,7 @@ bin/Exponent.app
 # If using Expo Go/Prebuild, uncomment these:
 android
 ios
+!.owl/baseline/*
 
 npm-debug.*
 *.jks
