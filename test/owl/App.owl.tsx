@@ -17,6 +17,7 @@ describe("App.tsx", () => {
     it("takes a screenshot of the initial screen", async () => {
       await delay(2000)
       const screen = await takeScreenshot("initial")
+      await toExist("loginbutton")
 
       expect(screen).toMatchBaseline()
     })
@@ -29,15 +30,15 @@ describe("App.tsx", () => {
     //     expect(screen).toMatchBaseline()
     //   })
 
-    // it("press Tap to sign in, then takes a screenshot", async () => {
-    //   await press("login-button")
+    it("press Tap to sign in, then takes a screenshot", async () => {
+      await press("loginbutton")
 
-    //   await toExist("welcome-heading")
+      await toExist("welcome-heading")
 
-    //   const screen = await takeScreenshot("welcome-screen")
+      const screen = await takeScreenshot("welcome-screen")
 
-    //   expect(screen).toMatchBaseline()
-    // })
+      expect(screen).toMatchBaseline()
+    })
 
     //   it("enters some text and takes a screenshot", async () => {
     //     await changeText("TextInput", "Entered text")

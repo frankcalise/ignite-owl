@@ -8,7 +8,7 @@
   },
   "android": {
     "packageName": "com.igniteowl",
-    "buildType": "Debug",
+    "buildType": "Release",
     "quiet": true
   },
   "debug": true,
