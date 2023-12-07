@@ -1,0 +1,16 @@
+{
+  "ios": {
+    "workspace": "ios/igniteowl.xcworkspace",
+    "scheme": "ignite-owl",
+    "configuration": "Debug",
+    "device": "iPhone 15",
+    "quiet": true
+  },
+  "android": {
+    "packageName": "com.igniteowl",
+    "buildType": "Debug",
+    "quiet": true
+  },
+  "debug": true,
+  "report": true
+}
